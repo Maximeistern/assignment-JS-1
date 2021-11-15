@@ -62,9 +62,10 @@ higher.addEventListener("click", async () => {
         omgångar ++;
     }else if(playCard.value < oldCard){
         oldCard = playCard.value;
-        card.children[0].innerText = ("Nästa värde hade varit" ,playCard.value);
+        card.children[0].innerText = playCard.value;
         card.children[1].setAttribute("src", playCard.image);
         alert(`Du förlorade! Du överlevde ${omgångar} omgång`);
+        location.reload();
     
     }
     
@@ -97,9 +98,10 @@ higher.addEventListener("click", async () => {
         omgångar++;
     }else if(playCard.value > oldCard){
         oldCard = playCard.value;
-        card.children[0].innerText = ("Nästa värde hade varit" ,playCard.value);
+        card.children[0].innerText = playCard.value;
         card.children[1].setAttribute("src", playCard.image);
-        alert(`Du förlorade! Du överlevde ${omgångar} omgång`);
+        alert(`Du förlorade! Du överlevde ${omgångar} omgångar`);
+        location.reload();
     
     }
     
