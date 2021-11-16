@@ -18,7 +18,9 @@ drawCardButt.addEventListener("click", async () => {
   const data = await res.json();
   console.log(data);
   let playCard = data.cards[0];
-  if(playCard.value == "JACK"){
+  if(playCard.value == "10"){
+    playCard.value = 10;
+}else if(playCard.value == "JACK"){
     playCard.value = 11;
 }else if(playCard.value == "QUEEN"){
     playCard.value = 12;
@@ -43,7 +45,9 @@ higher.addEventListener("click", async () => {
     const data = await res.json();
     console.log(data);
     let playCard = data.cards[0];
-    if(playCard.value == "JACK"){
+    if(playCard.value == "10"){
+        playCard.value = 10;
+    }else if(playCard.value == "JACK"){
         playCard.value = 11;
     }else if(playCard.value == "QUEEN"){
         playCard.value = 12;
@@ -64,7 +68,7 @@ higher.addEventListener("click", async () => {
         oldCard = playCard.value;
         card.children[0].innerText = playCard.value;
         card.children[1].setAttribute("src", playCard.image);
-        alert(`Du förlorade! Du överlevde ${omgångar} omgång`);
+        alert(`Du förlorade! Du överlevde ${omgångar} omgångar`);
         location.reload();
     
     }
@@ -79,7 +83,9 @@ higher.addEventListener("click", async () => {
     const data = await res.json();
     console.log(data);
     let playCard = data.cards[0];
-    if(playCard.value == "JACK"){
+    if(playCard.value == "10"){
+        playCard.value = 10;
+    }else if(playCard.value == "JACK"){
         playCard.value = 11;
     }else if(playCard.value == "QUEEN"){
         playCard.value = 12;
